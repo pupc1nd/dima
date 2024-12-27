@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <main>
+      <!-- Контейнер для картинки -->
+      <div class="image-container">
+        <img src="logo.jpg" alt="Логотип">
+      </div>
+    <h1>Counter-Strike 2</h1>
+    <nav>
+      <ul>
+        <li><a href="description.html">Описание</a></li>
+        <li><a href="dictionary.html">Словарь</a></li>
+        <li><a href="gallery.html" class="active">Галерея</a></li>
+        <li><a href="test.html">Тест</a></li>
+        <li><a href="profile.html">Личный кабинет</a></li>
+      </ul>
+    </nav>
+    <div class="user">
+      <span id="userLogin">Гость</span> <!-- Имя пользователя или "Гость" -->
+      <button id="logout">Выйти</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="gallery-container">
+      <h2>Галерея</h2>
+      <div id="slider">
+        <img src="images1.jpg" alt="Image 1" id="currentImage">
+        <p id="imageDescription">Описание фотографии 1</p>
+        <button id="prev" class="slider-button">Назад</button>
+        <button id="next" class="slider-button">Вперёд</button>
+        <p id="slideIndicator">1 из 5</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Контакты: <a href="https://vk.com/zxc_zxc228007" target="_blank">ВК</a></p>
+    <p>&copy; pupc1nd 2024. Все права защищены.</p>
+</footer>
+
+  <script src="slider.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>

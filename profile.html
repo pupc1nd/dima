@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <main>
+      <!-- Контейнер для картинки -->
+      <div class="image-container">
+        <img src="logo.jpg" alt="Логотип">
+      </div>
+    <h1>Counter-Strike 2</h1>
+    <nav>
+      <ul>
+        <li><a href="description.html">Описание</a></li>
+        <li><a href="dictionary.html">Словарь</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="test.html">Тест</a></li>
+        <li><a href="profile.html" class="active">Личный кабинет</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <main>
+    <div class="profile-container">
+      <h2>Личный кабинет</h2>
+      <div id="profile-info">
+        <p><strong>Логин:</strong> <span id="userLogin"></span></p>
+        <p><strong>Дата рождения:</strong> <span id="userBirthdate"></span></p>
+        <p><strong>Пол:</strong> <span id="userGender"></span></p>
+        <p><strong>Результат последнего теста:</strong> <span id="testResult"></span></p>
+      </div>
+      <button id="logout">Выйти</button>
+    </div>
+  </main>
+  <footer>
+    <p>Контакты: <a href="https://vk.com/zxc_zxc228007" target="_blank">ВК</a></p>
+    <p>&copy; pupc1nd 2024. Все права защищены.</p>
+</footer>
+  <script src="profile.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>

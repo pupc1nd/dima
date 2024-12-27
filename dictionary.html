@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Словарь</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <main>
+      <!-- Контейнер для картинки -->
+      <div class="image-container">
+        <img src="logo.jpg" alt="Логотип">
+      </div>
+    <h1>Counter-Strike 2</h1>
+    <nav>
+      <ul>
+        <li><a href="description.html">Описание</a></li>
+        <li><a href="dictionary.html" class="active">Словарь</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="test.html">Тест</a></li>
+        <li><a href="profile.html">Личный кабинет</a></li>
+      </ul>
+    </nav>
+    <div class="user">
+      <span id="userLogin"></span>
+      <button id="logout">Выйти</button>
+  </div>
+  </header>
+
+  <main>
+    <div class="dictionary-container">
+      <h2>Словарь</h2>
+      <input type="text" id="search" placeholder="Поиск по словарю" class="search-input">
+      <ul id="dictionary" class="dictionary-list">
+        <li data-description="Граната с дымом,который длится 20 секунд">Смок</li>
+        <li data-description="Граната, после взыра противник, если смотрел на нее оказывается слепым">Флеш</li>
+        <li data-description="Граната, взрывается, если кинуть ее,наносит большой урон ">Осколочная Граната</li>
+        <li data-description="Граната, после взрыва появляется небольшой круг из огня">Молтов</li>
+        <li data-description="Самая популярная карта для новичков">Mirage</li>
+        <li data-description="Команда должна зайти на плент и поставить бомбу">Террористы</li>
+        <li data-description="Команда должна не дать террористам зайти на плент и поставить бомбу, в ином случае ее разминировать">Спецназ</li>
+        <li data-description="Оружие, стоит 4750$ убивает с 1 патрона в любую часть тела">AWP</li>
+        <li data-description="Оружие за террористов, стоит 2700$ убивает примерно с 4 выстрелов в любую часть тела">AK-47</li>
+        <li data-description="Оружие за спецназ, стоит 2900$ убивает примерно с 4 выстрелов в любую часть тела">M4A1-s</li>
+      </ul>
+      <div id="description" class="description-box"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Контакты: <a href="https://vk.com/zxc_zxc228007" target="_blank">ВК</a></p>
+    <p>&copy; pupc1nd 2024. Все права защищены.</p>
+</footer>
+
+  <script>
+    const dictionary = document.getElementById('dictionary');
+    const search = document.getElementById('search');
+    const description = document.getElementById('description');
+
+    dictionary.addEventListener('click', (e) => {
+      if (e.target.tagName === 'LI') {
+        description.textContent = e.target.dataset.description;
+      }
+    });
+
+    search.addEventListener('input', () => {
+      const query = search.value.toLowerCase();
+      Array.from(dictionary.children).forEach((item) => {
+        item.style.display = item.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
+  <script src="common.js"></script>
+</body>
+</html>

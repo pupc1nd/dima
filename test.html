@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тест</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <main>
+      <!-- Контейнер для картинки -->
+      <div class="image-container">
+        <img src="logo.jpg" alt="Логотип">
+      </div>
+    <h1>Counter-Strike 2</h1>
+    <nav>
+      <ul>
+        <li><a href="description.html">Описание</a></li>
+        <li><a href="dictionary.html">Словарь</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="test.html" class="active">Тест</a></li>
+        <li><a href="profile.html">Личный кабинет</a></li>
+      </ul>
+    </nav>
+    <div class="user">
+      <span id="userLogin"></span>
+      <button id="logout">Выйти</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="test-container">
+      <h2>Тест</h2>
+      <form id="testForm">
+        <!-- Вопрос 1: Выбор варианта ответа -->
+        <h3>Вопрос 1:</h3>
+        <p>Самая популярная карта?</p>
+        <input type="radio" name="q1" value="Мираже">Mirage <br>
+        <input type="radio" name="q1" value="Даст2"> Dust 2<br>
+        <input type="radio" name="q1" value="Инферно"> Inferno<br>
+        <p id="q1Result" class="result"></p> <!-- Результат для вопроса 1 -->
+
+        <!-- Вопрос 2: Выбор варианта ответа -->
+        <h3>Вопрос 2:</h3>
+        <p>Какая команда выграла мажор в Шанхае</p>
+        <input type="radio" name="q2" value="Нави"> Navi<br>
+        <input type="radio" name="q2" value="Спирит"> Spirit<br>
+        <input type="radio" name="q2" value="Мауз"> MOUZ<br>
+        <p id="q2Result" class="result"></p> <!-- Результат для вопроса 2 -->
+
+        <!-- Вопрос 3: Выбор варианта ответа -->
+        <h3>Вопрос 3:</h3>
+        <p>Какой максимальный уровень фейсита существует?</p>
+        <input type="radio" name="q3" value="8"> 8<br>
+        <input type="radio" name="q3" value="10"> 10<br>
+        <input type="radio" name="q3" value="14"> 14<br>
+        <p id="q3Result" class="result"></p> <!-- Результат для вопроса 3 -->
+
+        <!-- Вопрос 4: Ввод текста -->
+        <h3>Вопрос 4:</h3>
+        <p>Самое популярное оружие за террористов?</p>
+        <input type="text" id="q4" required>
+        <p id="q4Result" class="result"></p> <!-- Результат для вопроса 4 -->
+
+        <!-- Вопрос 5: Ввод текста -->
+        <h3>Вопрос 5:</h3>
+        <p>Какая компания создала игру?</p>
+        <input type="text" id="q5" required>
+        <p id="q5Result" class="result"></p> <!-- Результат для вопроса 5 -->
+
+        <!-- Вопрос 6: Ввод текста -->
+        <h3>Вопрос 6:</h3>
+        <p>В каком году вышла игра?</p>
+        <input type="text" id="q6" required>
+        <p id="q6Result" class="result"></p> <!-- Результат для вопроса 6 -->
+
+        <button type="button" id="checkTest">Проверить</button>
+        <button type="button" id="resetTest" style="display:none;">Пройти заново</button>
+      </form>
+      <p id="testResult"></p>
+      <p id="errorMessage" style="color: red; display: none;">Пожалуйста, заполните все поля.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Контакты: <a href="https://vk.com/zxc_zxc228007" target="_blank">ВК</a></p>
+    <p>&copy; pupc1nd 2024. Все права защищены.</p>
+  </footer>
+
+  <script src="test.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>
